@@ -1,8 +1,35 @@
+# Ambiente
 .venv/
 venv/
 .env
+
+# Material local (não publicar)
+.legado_local/
+
+# Saídas geradas
+output/*
+!output/.gitkeep
+
+# Dados coletados (samples ficam versionados; pasta json mantida vazia)
+data/json/*
+!data/json/.gitignore
+
+# Python
 __pycache__/
 *.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter / OS / IDE
 .ipynb_checkpoints/
 .DS_Store
-.legado_local/
+Thumbs.db
+.idea/
+.vscode/
+
+# Binários
+*.exe
+*.zip
+geckodriver*
+Anaconda*
