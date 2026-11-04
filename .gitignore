@@ -33,3 +33,5 @@ Thumbs.db
 *.zip
 geckodriver*
 Anaconda*
+
+# Binários locais
