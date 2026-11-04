@@ -5,7 +5,7 @@ Pipeline em Python para **coleta, processamento e análise** de dados de pregõe
 Ideal para demonstrar automação de dados, web scraping com Selenium, CLI e geração de relatórios — com um fluxo que roda **sem login** a partir de JSONs de exemplo.
 
 > **Acesso ao portal:** a coleta (`collect`) só funciona para quem possui **cadastro no sistema Compras** (gov.br), pois exige login autenticado em [contratos.sistema.gov.br](https://contratos.sistema.gov.br).  
-> Uma **nova versão sem necessidade de cadastro** está em desenvolvimento.
+> Versão **sem cadastro**, via API pública Dados Abertos: [analise-atas-publicas](https://github.com/MiqueiasBoeira/analise-atas-publicas).
 
 ---
 
@@ -126,7 +126,7 @@ Arquivo: `UG - NUMERO_PREGAO.json` (ex.: `160368 - 00001_2021.json`).
 ## Observações
 
 - A **coleta** depende de cadastro no Compras; `resumo` e `analyze` funcionam offline com JSONs.
-- Uma versão **sem cadastro** no portal está sendo desenvolvida.
+- Versão **sem cadastro** (API Dados Abertos): [analise-atas-publicas](https://github.com/MiqueiasBoeira/analise-atas-publicas).
 - Os XPaths em `scraper/extractors.py` dependem do layout atual do portal.
 - O comando `collect` abre uma aba nova no Chrome já logado, sem fechar sua sessão.
 - Dados de exemplo em `data/samples` são suficientes para demonstrar o pipeline de análise.
