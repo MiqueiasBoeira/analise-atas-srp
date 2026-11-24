@@ -1,5 +1,34 @@
 # Análise de Contratos Públicos
 
+> 🇬🇧 **English summary**
+>
+> Python pipeline that **scrapes, processes and analyzes** item-level data
+> from Brazil's federal government contracts portal.
+>
+> **Problem it solved:** procurement analysts had to open each record and
+> check every item by hand to see how much of the requested amount each
+> agency actually used. This tool automates the whole process: Selenium
+> collects the data into JSON, and pandas consolidates it into Excel/CSV
+> reports.
+>
+> **Highlights:** CLI with three commands (`collect`, `resumo`, `analyze`) ·
+> Selenium scraping of a JavaScript-rendered, authenticated portal ·
+> pandas → Excel/CSV · centralized config via `.env` · clean separation
+> between scraper, pipeline and data utilities.
+>
+> **Try it without portal access** (sample data included):
+> ```bash
+> pip install -r requirements.txt
+> python main.py resumo --input-dir data/samples
+> python main.py analyze --input-dir data/samples
+> ```
+> Results are written to `output/`.
+>
+> *Docs and code comments below are in Portuguese, as the tool was built
+> for a Brazilian government procurement team.*
+
+---
+
 Pipeline em Python para **coleta, processamento e análise** de dados de pregões no portal [contratos.sistema.gov.br](https://contratos.sistema.gov.br).
 
 Ideal para demonstrar automação de dados, web scraping com Selenium, CLI e geração de relatórios — com um fluxo que roda **sem login** a partir de JSONs de exemplo.
